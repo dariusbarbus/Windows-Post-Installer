@@ -1,7 +1,7 @@
-region Protocols
+#region Protocols
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $ProgressPreference = 'Continue'
-endregion
+#endregion
 
 #region Date and Time preferences
 Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "iFirstDayOfWeek" -Value "0"
@@ -13,10 +13,10 @@ $source1 = "https://github.com/dariusbarbus/FORK-OF-Sophia-Script-for-Windows/ar
 $output1 = "C:\setup\script\dbsophia.zip"
 #endregion
 
-region Variables Second Script
+#region Variables Second Script
 $source2 = "https://github.com/mrkenhoo/sunvalley-srw/releases/download/0.0.12.5/sunvalley-srw-setup.exe"
 $output2 = "C:\setup\script\sunvalley-srw.exe"
-endregion
+#endregion
 
 #region New directory
 $path = "C:\setup\script"
