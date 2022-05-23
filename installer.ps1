@@ -5,7 +5,7 @@ endregion
 
 #region Date and Time preferences
 Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "iFirstDayOfWeek" -Value "0"
-{Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "sShortDate" -Value "d/MM/yyyy"}
+Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "sShortDate" -Value "d/MM/yyyy"
 #endregion
 
 #region Variables First Script
