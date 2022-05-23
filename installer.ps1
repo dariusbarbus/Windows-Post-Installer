@@ -3,6 +3,11 @@ region Protocols
 $ProgressPreference = 'Continue'
 endregion
 
+#region Date and Time preferences
+Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "iFirstDayOfWeek" -Value "0"
+{Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "sShortDate" -Value "d/MM/yyyy"}
+#endregion
+
 #region Variables First Script
 $source1 = "https://github.com/dariusbarbus/FORK-OF-Sophia-Script-for-Windows/archive/refs/heads/master.zip"
 $output1 = "C:\setup\script\dbsophia.zip"
