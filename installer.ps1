@@ -6,6 +6,7 @@ $ProgressPreference = 'Continue'
 #region Date and Time preferences
 Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "iFirstDayOfWeek" -Value "0"
 Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "sShortDate" -Value "d/MM/yyyy"
+Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "sShortTime" -Value " h:mm tt"
 #endregion
 
 #region Variables First Script
@@ -36,5 +37,26 @@ Invoke-WebRequest -Uri $source2 -OutFile $output2
 Invoke-Expression "&'C:\setup\script\FORK-OF-Sophia-Script-for-Windows-master\Sophia Script\Sophia Script for Windows 11\Sophia.ps1'"
 #endregion
 
+#RESTORE WINDOWS STORE
+#Get-AppXPackage WindowsStore -AllUsers  Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)AppXManifest.xml”}
+#Get-AppXPackage WindowsTerminal -AllUsers  Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)AppXManifest.xml”}
 
-
+#PROGRAM LIST
+- Firefox
+- Chrome 
+- Bitwarden
+- Whatsapp
+- Spotify
+- Office deployment tool
+- git
+- Klite codecs
+- ImageGLass 
+- windows terminal
+- icloud
+- notepad++
+- vscode
+- qbittorrent
+- speedcrunch
+- ueli
+- 7 zip 
+- powershell 7
