@@ -377,7 +377,7 @@ QuickAccessFrequentFolders -Hide
 
 # Set the taskbar alignment to the center (default value)
 # Установить выравнивание панели задач по центру (значение по умолчанию)
-# TaskbarAlignment -Center
+TaskbarAlignment -Center
 
 # Hide the search button from the taskbar
 # Скрыть кнопку поиска с панели задач
@@ -477,11 +477,11 @@ RestartNotification -Show
 
 # Do not add the "- Shortcut" suffix to the file name of created shortcuts
 # Нe дoбaвлять "- яpлык" к имени coздaвaeмых яpлыков
-ShortcutsSuffix -Disable
+# ShortcutsSuffix -Disable
 
 # Add the "- Shortcut" suffix to the file name of created shortcuts (default value)
 # Дoбaвлять "- яpлык" к имени coздaвaeмых яpлыков (значение по умолчанию)
-# ShortcutsSuffix -Enable
+ShortcutsSuffix -Enable
 
 # Use the Print screen button to open screen snipping
 # Использовать кнопку PRINT SCREEN, чтобы запустить функцию создания фрагмента экрана
@@ -493,11 +493,11 @@ PrtScnSnippingTool -Enable
 
 # Let me use a different input method for each app window
 # Позволить выбирать метод ввода для каждого окна
-AppsLanguageSwitch -Enable
+# AppsLanguageSwitch -Enable
 
 # Do not use a different input method for each app window (default value)
 # Не использовать метод ввода для каждого окна (значение по умолчанию)
-# AppsLanguageSwitch -Disable
+AppsLanguageSwitch -Disable
 
 # When I grab a windows's title bar and shake it, minimize all other windows
 # При захвате заголовка окна и встряхивании сворачиваются все остальные окна
@@ -645,11 +645,11 @@ WindowsCapabilities -Uninstall
 
 # Receive updates for other Microsoft products
 # Получать обновления для других продуктов Майкрософт
-UpdateMicrosoftProducts -Enable
+# UpdateMicrosoftProducts -Enable
 
 # Do not receive updates for other Microsoft products (default value)
 # Не получать обновления для других продуктов Майкрософт (значение по умолчанию)
-# UpdateMicrosoftProducts -Disable
+UpdateMicrosoftProducts -Disable
 
 <#
 	Set power plan on "High performance"
@@ -715,7 +715,7 @@ InputMethod -Default
 	Пользовательские файлы и папки не будут перемещены в новое расположение. Переместите их вручную
 	По умолчанию они располагаются в папке %USERPROFILE%
 #>
-SetUserShellFolderLocation -Root
+# SetUserShellFolderLocation -Root
 
 <#
 	Select folders for user folders location manually using a folder browser dialog
@@ -806,7 +806,7 @@ NumLock -Enable
 
 # Disable Caps Lock
 # Выключить Caps Lock
-# CapsLock -Disable
+CapsLock -Disable
 
 # Enable Caps Lock (default value)
 # Включить Caps Lock (значение по умолчанию)
@@ -838,11 +838,11 @@ ThumbnailCacheRemoval -Enable
 
 # Automatically saving my restartable apps and restart them when I sign back in
 # Автоматически сохранять мои перезапускаемые приложения из системы и перезапускать их при повторном входе
-SaveRestartableApps -Enable
+# SaveRestartableApps -Enable
 
 # Turn off automatically saving my restartable apps and restart them when I sign back in (default value)
 # Выключить автоматическое сохранение моих перезапускаемых приложений из системы и перезапускать их при повторном входе (значение по умолчанию)
-# SaveRestartableApps -Disable
+SaveRestartableApps -Disable
 
 # Enable "Network Discovery" and "File and Printers Sharing" for workgroup networks
 # Включить сетевое обнаружение и общий доступ к файлам и принтерам для рабочих групп
@@ -862,11 +862,11 @@ ActiveHours -Automatically
 
 # Restart as soon as possible to finish updating
 # Перезапустить устройство как можно быстрее, чтобы завершить обновление
-RestartDeviceAfterUpdate -Enable
+# RestartDeviceAfterUpdate -Enable
 
 # Don't restart as soon as possible to finish updating (default value)
 # Не перезапускать устройство как можно быстрее, чтобы завершить обновление (значение по умолчанию)
-# RestartDeviceAfterUpdate -Disable
+RestartDeviceAfterUpdate -Disable
 
 <#
 	Register app, calculate hash, and associate with an extension with the "How do you want to open this" pop-up hidden
@@ -908,7 +908,7 @@ InstallVCRedistx64
 #region Start menu
 # Unpin all Start apps
 # Открепить все приложения от начального экрана
-# UnpinAllStartApps
+UnpinAllStartApps
 
 # Run the Windows PowerShell shortcut from the Start menu as Administrator
 # Запускать ярлык Windows PowerShell в меню "Пуск" от имени Администратора
@@ -920,7 +920,7 @@ RunPowerShellShortcut -Elevated
 
 # Show default Start layout (for 22509+ build only) (default value)
 # Отображать стандартный макет начального экрана (только для сборки 22509+) (значение по умолчанию)
-StartLayout -Default
+# StartLayout -Default
 
 # Show more pins on Start (for 22509+ build only)
 # Отображать больше закреплений на начальном экране (только для сборки 22509+)
@@ -1005,7 +1005,7 @@ XboxGameTips -Disable
 
 # Choose an app and set the "High performance" graphics performance for it. Only if you have a dedicated GPU
 # Выбрать приложение и установить для него параметры производительности графики на "Высокая производительность". Только при наличии внешней видеокарты
-SetAppGraphicsPerformance
+# SetAppGraphicsPerformance
 
 <#
 	Turn on hardware-accelerated GPU scheduling. Restart needed
@@ -1191,11 +1191,11 @@ DNSoverHTTPS -Enable -PrimaryDNS 1.0.0.1 -SecondaryDNS 1.1.1.1
 #region Context menu
 # Show the "Extract all" item in the Windows Installer (.msi) context menu
 # Отобразить пункт "Извлечь все" в контекстное меню Windows Installer (.msi)
-MSIExtractContext -Show
+# MSIExtractContext -Show
 
 # Hide the "Extract all" item from the Windows Installer (.msi) context menu (default value)
 # Скрыть пункт "Извлечь все" из контекстного меню Windows Installer (.msi) (значение по умолчанию)
-# MSIExtractContext -Hide
+MSIExtractContext -Hide
 
 # Show the "Install" item in the Cabinet (.cab) filenames extensions context menu
 # Отобразить пункт "Установить" в контекстное меню .cab архивов
@@ -1207,11 +1207,11 @@ CABInstallContext -Show
 
 # Show the "Run as different user" item to the .exe filename extensions context menu
 # Отобразить пункт "Запуск от имени другого пользователя" в контекстное меню .exe файлов
-RunAsDifferentUserContext -Show
+# RunAsDifferentUserContext -Show
 
 # Hide the "Run as different user" item from the .exe filename extensions context menu (default value)
 # Скрыть пункт "Запуск от имени другого пользователя" из контекстное меню .exe файлов (значение по умолчанию)
-# RunAsDifferentUserContext -Hide
+RunAsDifferentUserContext -Hide
 
 # Hide the "Cast to Device" item from the media files and folders context menu
 # Скрыть пункт "Передать на устройство" из контекстного меню медиа-файлов и папок
@@ -1319,7 +1319,7 @@ OpenWindowsTerminalAdminContext -Show
 
 # Disable the Windows 10 context menu style (default value)
 # Отключить стиль контекстного меню из Windows 10 (значение по умолчанию)
-Windows10ContextMenu -Disable
+# Windows10ContextMenu -Disable
 
 # Enable the Windows 10 context menu style
 # Включить стиль контекстного меню из Windows 10

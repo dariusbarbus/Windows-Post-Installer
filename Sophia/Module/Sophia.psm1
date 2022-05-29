@@ -4708,22 +4708,41 @@ function WindowsCapabilities
 
 		# WordPad
 		"Microsoft.Windows.WordPad*"
-	)
 
-	# The following optional features will have their checkboxes unchecked
-	[string[]]$UncheckedCapabilities = @(
 		# Internet Explorer mode
 		"Browser.InternetExplorer*",
 
 		# Math Recognizer
 		"MathRecognizer*",
-
+		
 		# Windows Media Player
 		# If you want to leave "Multimedia settings" element in the advanced settings of Power Options do not uninstall this feature
 		"Media.WindowsMediaPlayer*",
-
+		
 		# OpenSSH Client
-		"OpenSSH.Client*"
+		"OpenSSH.Client*",
+
+		# Windows PowerShell Intergrated Scripting Enviroment
+		"Microsoft.Windows.PowerShell.ISE*",
+
+		# Mail, contacts, and calendar sync component
+		"OneCoreUAP.OneSync*"
+	)
+
+	# The following optional features will have their checkboxes unchecked
+	[string[]]$UncheckedCapabilities = @(
+		# # Internet Explorer mode
+		# "Browser.InternetExplorer*",
+
+		# # Math Recognizer
+		# "MathRecognizer*",
+
+		# # Windows Media Player
+		# # If you want to leave "Multimedia settings" element in the advanced settings of Power Options do not uninstall this feature
+		# "Media.WindowsMediaPlayer*",
+
+		# # OpenSSH Client
+		# "OpenSSH.Client*"
 	)
 
 	# The following optional features will be excluded from the display
@@ -4737,11 +4756,11 @@ function WindowsCapabilities
 		# Notepad
 		"Microsoft.Windows.Notepad*",
 
-		# Mail, contacts, and calendar sync component
-		"OneCoreUAP.OneSync*",
+		# # Mail, contacts, and calendar sync component
+		# "OneCoreUAP.OneSync*",
 
-		# Windows PowerShell Intergrated Scripting Enviroment
-		"Microsoft.Windows.PowerShell.ISE*",
+		# # Windows PowerShell Intergrated Scripting Enviroment
+		# "Microsoft.Windows.PowerShell.ISE*",
 
 		# Management of printers, printer drivers, and printer servers
 		"Print.Management.Console*",
@@ -8401,7 +8420,10 @@ function UninstallUWPApps
 		"NVIDIACorp.NVIDIAControlPanel",
 
 		# Realtek Audio Console
-		"RealtekSemiconductorCorp.RealtekAudioControl"
+		"RealtekSemiconductorCorp.RealtekAudioControl",
+
+		# Notepad
+		"Microsoft.WindowsNotepad"
 	)
 
 	# The following UWP apps will be excluded from the display
@@ -8412,8 +8434,8 @@ function UninstallUWPApps
 		# Store Experience Host
 		"Microsoft.StorePurchaseApp",
 
-		# Notepad
-		"Microsoft.WindowsNotepad",
+		# # Notepad
+		# "Microsoft.WindowsNotepad",
 
 		# Microsoft Store
 		"Microsoft.WindowsStore",
@@ -8480,12 +8502,12 @@ function UninstallUWPApps
 					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
 				<StackPanel Name="PanelSelectAll" Grid.Column="0" HorizontalAlignment="Left">
-					<CheckBox Name="CheckBoxSelectAll" IsChecked="False"/>
+					<CheckBox Name="CheckBoxSelectAll" IsChecked="True"/>
 					<TextBlock Name="TextBlockSelectAll" Margin="10,10, 0, 10"/>
 				</StackPanel>
 				<StackPanel Name="PanelRemoveForAll" Grid.Column="1" HorizontalAlignment="Right">
 					<TextBlock Name="TextBlockRemoveForAll" Margin="10,10, 0, 10"/>
-					<CheckBox Name="CheckBoxForAllUsers" IsChecked="False"/>
+					<CheckBox Name="CheckBoxForAllUsers" IsChecked="True"/>
 				</StackPanel>
 			</Grid>
 			<Border>
