@@ -41,22 +41,22 @@ Invoke-Expression "&'C:\setup\script\FORK-OF-Sophia-Script-for-Windows-master\So
 #Get-AppXPackage WindowsStore -AllUsers  Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)AppXManifest.xml”}
 #Get-AppXPackage WindowsTerminal -AllUsers  Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)AppXManifest.xml”}
 
-#PROGRAM LIST
-- Firefox
-- Chrome 
-- Bitwarden
-- Whatsapp
-- Spotify
-- Office deployment tool
-- git
-- Klite codecs
-- ImageGLass 
-- windows terminal
-- icloud
-- notepad++
-- vscode
-- qbittorrent
-- speedcrunch
-- ueli
-- 7 zip 
-- powershell 7
+# #PROGRAM LIST
+# - Firefox
+# - Chrome 
+# - Bitwarden
+# - Whatsapp
+# - Spotify
+# - Office deployment tool
+# - git
+# - Klite codecs
+# - ImageGLass 
+# - windows terminal
+# - icloud
+# - notepad++
+# - vscode
+# - qbittorrent
+# - speedcrunch
+# - ueli
+# - 7 zip 
+# - powershell 7
