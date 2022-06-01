@@ -9,6 +9,14 @@ Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "s
 Set-ItemProperty "HKCU:\HKEY_CURRENT_USER\Control Panel\International\" -Name "sShortTime" -Value " h:mm tt"
 #endregion
 
+#region Disable alt+tab With Edge Tabs
+Set-Itemproperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "MultiTaskingAltTabFilter" -Value 3
+#enregion
+
+#region Disable Snap Layouts in Taskbar
+Set-Itemproperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "EnableSnapAssistFlyout" -Value 0
+#endregion
+
 #region Variables First Script
 $source1 = "https://github.com/dariusbarbus/FORK-OF-Sophia-Script-for-Windows/archive/refs/heads/master.zip"
 $output1 = "C:\setup\script\dbsophia.zip"
@@ -37,12 +45,15 @@ Invoke-WebRequest -Uri $source2 -OutFile $output2
 Invoke-Expression "&'C:\setup\script\FORK-OF-Sophia-Script-for-Windows-master\Sophia Script\Sophia Script for Windows 11\Sophia.ps1'"
 #endregion
 
-#RESTORE WINDOWS STORE
+
+
+#region RESTORE WINDOWS STORE AND TERMINAL
 #Get-AppXPackage WindowsStore -AllUsers  Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)AppXManifest.xml”}
 #Get-AppXPackage WindowsTerminal -AllUsers  Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)AppXManifest.xml”}
+#endregion
 
 # #PROGRAM LIST
-# - Firefox
+# - Min
 # - Chrome 
 # - Bitwarden
 # - Whatsapp

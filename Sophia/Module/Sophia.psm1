@@ -4723,10 +4723,7 @@ function WindowsCapabilities
 		"OpenSSH.Client*",
 
 		# Windows PowerShell Intergrated Scripting Enviroment
-		"Microsoft.Windows.PowerShell.ISE*",
-
-		# Mail, contacts, and calendar sync component
-		"OneCoreUAP.OneSync*"
+		"Microsoft.Windows.PowerShell.ISE*"
 	)
 
 	# The following optional features will have their checkboxes unchecked
@@ -4756,8 +4753,8 @@ function WindowsCapabilities
 		# Notepad
 		"Microsoft.Windows.Notepad*",
 
-		# # Mail, contacts, and calendar sync component
-		# "OneCoreUAP.OneSync*",
+		# Mail, contacts, and calendar sync component
+		"OneCoreUAP.OneSync*",
 
 		# # Windows PowerShell Intergrated Scripting Enviroment
 		# "Microsoft.Windows.PowerShell.ISE*",
@@ -4822,7 +4819,9 @@ function WindowsCapabilities
 				<StackPanel Name="PanelContainer" Orientation="Vertical"/>
 			</ScrollViewer>
 			<Button Name="Button" Grid.Row="2"/>
+			
 		</Grid>
+		
 	</Window>
 	'
 	#endregion XAML Markup
@@ -8365,65 +8364,65 @@ function UninstallUWPApps
 	#region Variables
 	# The following UWP apps will have their checkboxes unchecked
 	$UncheckedAppxPackages = @(
-		# AMD Radeon Software
-		"AdvancedMicroDevicesInc-2.AMDRadeonSoftware",
+		# # AMD Radeon Software
+		# "AdvancedMicroDevicesInc-2.AMDRadeonSoftware",
 
-		# Intel Graphics Control Center
-		"AppUp.IntelGraphicsControlPanel",
-		"AppUp.IntelGraphicsExperience",
+		# # Intel Graphics Control Center
+		# "AppUp.IntelGraphicsControlPanel",
+		# "AppUp.IntelGraphicsExperience",
 
-		# Sticky Notes
-		"Microsoft.MicrosoftStickyNotes",
+		# # Sticky Notes
+		# "Microsoft.MicrosoftStickyNotes",
 
-		# Screen Sketch
-		"Microsoft.ScreenSketch",
+		# # Screen Sketch
+		# "Microsoft.ScreenSketch",
 
-		# Photos (and Video Editor)
-		"Microsoft.Windows.Photos",
-		"Microsoft.Photos.MediaEngineDLC",
+		# # Photos (and Video Editor)
+		# "Microsoft.Windows.Photos",
+		# "Microsoft.Photos.MediaEngineDLC",
 
-		# HEVC Video Extensions from Device Manufacturer
-		"Microsoft.HEVCVideoExtension",
+		# # HEVC Video Extensions from Device Manufacturer
+		# "Microsoft.HEVCVideoExtension",
 
-		# Calculator
-		"Microsoft.WindowsCalculator",
+		# # Calculator
+		# "Microsoft.WindowsCalculator",
 
-		# Windows Camera
-		"Microsoft.WindowsCamera",
+		# # Windows Camera
+		# "Microsoft.WindowsCamera",
 
-		# Xbox Identity Provider
-		"Microsoft.XboxIdentityProvider",
+		# # Xbox Identity Provider
+		# "Microsoft.XboxIdentityProvider",
 
-		# Xbox Console Companion
-		"Microsoft.XboxApp",
+		# # Xbox Console Companion
+		# "Microsoft.XboxApp",
 
-		# Xbox
-		"Microsoft.GamingApp",
-		"Microsoft.GamingServices",
+		# # Xbox
+		# "Microsoft.GamingApp",
+		# "Microsoft.GamingServices",
 
-		# Paint
-		"Microsoft.Paint",
+		# # Paint
+		# "Microsoft.Paint",
 
-		# Xbox TCUI
-		"Microsoft.Xbox.TCUI",
+		# # Xbox TCUI
+		# "Microsoft.Xbox.TCUI",
 
-		# Xbox Speech To Text Overlay
-		"Microsoft.XboxSpeechToTextOverlay",
+		# # Xbox Speech To Text Overlay
+		# "Microsoft.XboxSpeechToTextOverlay",
 
-		# Xbox Game Bar
-		"Microsoft.XboxGamingOverlay",
+		# # Xbox Game Bar
+		# "Microsoft.XboxGamingOverlay",
 
-		# Xbox Game Bar Plugin
-		"Microsoft.XboxGameOverlay",
+		# # Xbox Game Bar Plugin
+		# "Microsoft.XboxGameOverlay",
 
-		# NVIDIA Control Panel
-		"NVIDIACorp.NVIDIAControlPanel",
+		# # NVIDIA Control Panel
+		# "NVIDIACorp.NVIDIAControlPanel",
 
-		# Realtek Audio Console
-		"RealtekSemiconductorCorp.RealtekAudioControl",
+		# # Realtek Audio Console
+		# "RealtekSemiconductorCorp.RealtekAudioControl",
 
-		# Notepad
-		"Microsoft.WindowsNotepad"
+		# # Notepad
+		# "Microsoft.WindowsNotepad"
 	)
 
 	# The following UWP apps will be excluded from the display
