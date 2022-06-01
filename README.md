@@ -5,3 +5,4 @@
     - Get-AppXPackage WindowsTerminal -AllUsers  Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)AppXManifest.xml”}
 4. Install Terminal using instructions
 5. Install Office
+6. Run installer.ps1
