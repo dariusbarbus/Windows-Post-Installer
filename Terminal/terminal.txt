@@ -1,0 +1,40 @@
+1. Install hack fonts "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip"
+
+2. Install Oh-My-Posh "winget install oh-my-posh"
+
+3. Install Terminal icons
+Install-Module -Name Terminal-Icons -Repository PSGallery
+Import-Module -Name Terminal-Icons
+
+4. Install Prdictive IntelliSense
+Install-Module PSReadLine -Force
+
+5. In settings.json file, right under "defaults":
+        "defaults": {
+            
+            "font": 
+            {
+                "face": "Hack NF"
+            },
+            "opacity": 60,
+            "useAcrylic": true
+        
+        },
+
+6. Change background color
+    "background": "#44475A",
+
+7. Add the following to Microsoft.Powershell_Profile.ps1:
+Import-Module -Name Terminal-Icons
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -EditMode Windows
+Set-PSReadLineOption -PredictionSource History
+Set-Alias notepad "C:\Program Files (x86)\Notepad++\notepad++.exe"
+Set-Alias code "C:\Program Files\Microsoft VS Code\Code.exe"
+
+oh-my-posh init pwsh --config ~\Documents\PowerShell/.datomic.omp.json | Invoke-Expression
+
+8. Add the .datomic.omp.json next to Microsoft.Powershell_Profile.ps1
+
+Start Terminal
