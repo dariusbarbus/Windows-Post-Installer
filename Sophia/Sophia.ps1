@@ -1,6 +1,6 @@
 ﻿<#
 	.SYNOPSIS
-	Default preset file for "Sophia Script for Windows 11"
+	Darius Barbus preset file for "Sophia Script for Windows 11"
 
 	Version: v6.0.14
 	Date: 09.04.2022

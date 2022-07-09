@@ -192,35 +192,35 @@ function Checkings
 	}
 
 	# Check if the current module version is the latest one
-	try
-	{
-		[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+	# try
+	# {
+	# 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-		# https://github.com/farag2/Sophia-Script-for-Windows/blob/master/sophia_script_versions.json
-		$Parameters = @{
-			Uri              = "https://raw.githubusercontent.com/farag2/Sophia-Script-for-Windows/master/sophia_script_versions.json"
-			UseBasicParsing  = $true
-		}
-		$LatestRelease = (Invoke-RestMethod @Parameters).Sophia_Script_Windows_11_PowerShell_5_1
-		$CurrentRelease = (Get-Module -Name Sophia).Version.ToString()
-		switch ([System.Version]$LatestRelease -gt [System.Version]$CurrentRelease)
-		{
-			$true
-			{
-				Write-Warning -Message $Localization.UnsupportedRelease
+	# 	# https://github.com/farag2/Sophia-Script-for-Windows/blob/master/sophia_script_versions.json
+	# 	$Parameters = @{
+	# 		Uri              = "https://raw.githubusercontent.com/farag2/Sophia-Script-for-Windows/master/sophia_script_versions.json"
+	# 		UseBasicParsing  = $true
+	# 	}
+	# 	$LatestRelease = (Invoke-RestMethod @Parameters).Sophia_Script_Windows_11_PowerShell_5_1
+	# 	$CurrentRelease = (Get-Module -Name Sophia).Version.ToString()
+	# 	switch ([System.Version]$LatestRelease -gt [System.Version]$CurrentRelease)
+	# 	{
+	# 		$true
+	# 		{
+	# 			Write-Warning -Message $Localization.UnsupportedRelease
 
-				Start-Sleep -Seconds 5
+	# 			Start-Sleep -Seconds 5
 
-				Start-Process -FilePath "https://github.com/farag2/Sophia-Script-for-Windows/releases/latest"
-				exit
-			}
-		}
-	}
-	catch [System.Net.WebException]
-	{
-		Write-Warning -Message ($Localization.NoResponse -f "https://github.com/farag2/Sophia-Script-for-Windows")
-		Write-Error -Message ($Localization.NoResponse -f "https://github.com/farag2/Sophia-Script-for-Windows") -ErrorAction SilentlyContinue
-	}
+	# 			Start-Process -FilePath "https://github.com/farag2/Sophia-Script-for-Windows/releases/latest"
+	# 			exit
+	# 		}
+	# 	}
+	# }
+	# catch [System.Net.WebException]
+	# {
+	# 	Write-Warning -Message ($Localization.NoResponse -f "https://github.com/farag2/Sophia-Script-for-Windows")
+	# 	Write-Error -Message ($Localization.NoResponse -f "https://github.com/farag2/Sophia-Script-for-Windows") -ErrorAction SilentlyContinue
+	# }
 
 	# Unblock all files in the script folder by removing the Zone.Identifier alternate data stream with a value of "3"
 	Get-ChildItem -Path $PSScriptRoot\..\ -File -Recurse -Force | Unblock-File

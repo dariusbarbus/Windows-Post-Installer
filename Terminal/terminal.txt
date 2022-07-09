@@ -12,17 +12,41 @@ Install-Module PSReadLine -Force
 5. In settings.json file, right under "defaults":
         "defaults": {
             
+	    "colorScheme": "Dracula",
             "font": 
             {
                 "face": "Hack NF"
             },
             "opacity": 60,
+	    "startingDirectory":"%USERPROFILE%"		
             "useAcrylic": true
         
         },
 
-6. Change background color
-    "background": "#44475A",
+6. Add dracula color scheme
+	{
+            "background": "#44475A",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#A1639A",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
 
 7. Add the following to Microsoft.Powershell_Profile.ps1:
 Import-Module -Name Terminal-Icons
@@ -32,7 +56,16 @@ Set-PSReadLineOption -EditMode Windows
 Set-PSReadLineOption -PredictionSource History
 Set-Alias notepad "C:\Program Files (x86)\Notepad++\notepad++.exe"
 Set-Alias code "C:\Program Files\Microsoft VS Code\Code.exe"
+Set-Alias nvim "C:\Program Files\Neovim\bin\nvim.exe"
 
+Write-Host "
+██████╗  █████╗ ██████╗ ██╗██╗   ██╗███████╗██████╗  █████╗ ██████╗ ██████╗ ██╗   ██╗███████╗
+██╔══██╗██╔══██╗██╔══██╗██║██║   ██║██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║   ██║██╔════╝
+██║  ██║███████║██████╔╝██║██║   ██║███████╗██████╔╝███████║██████╔╝██████╔╝██║   ██║███████╗
+██║  ██║██╔══██║██╔══██╗██║██║   ██║╚════██║██╔══██╗██╔══██║██╔══██╗██╔══██╗██║   ██║╚════██║
+██████╔╝██║  ██║██║  ██║██║╚██████╔╝███████║██████╔╝██║  ██║██║  ██║██████╔╝╚██████╔╝███████║
+╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚══════╝
+"
 oh-my-posh init pwsh --config ~\Documents\PowerShell/.datomic.omp.json | Invoke-Expression
 
 8. Add the .datomic.omp.json next to Microsoft.Powershell_Profile.ps1
